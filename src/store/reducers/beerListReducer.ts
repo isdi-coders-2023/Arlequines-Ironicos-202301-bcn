@@ -1,24 +1,20 @@
 import { BeerStructure } from "../../data/types";
 import {
-  beerListAction,
-  beerListActionType,
+  BeerListAction,
+  BeerListActionType,
   LoadBeerListAction,
 } from "../actions/beerList/types";
 
 const beerListReducer = (
   currentBeerList: BeerStructure[],
-  action: beerListAction
+  action: BeerListAction
 ) => {
   let newBeerList: BeerStructure[];
 
-  switch (action.type) {
-    case beerListActionType.loadBeerList:
-      newBeerList = [...(action as LoadBeerListAction).payload];
-      break;
-
-    default:
-      newBeerList = currentBeerList;
+  if (action.type === BeerListActionType.loadBeerList) {
+    newBeerList = [...(action as LoadBeerListAction).payload];
   }
+  newBeerList = currentBeerList;
 
   return newBeerList;
 };

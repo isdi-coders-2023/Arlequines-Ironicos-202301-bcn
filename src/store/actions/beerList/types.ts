@@ -1,15 +1,15 @@
 import { BeerStructure } from "../../../data/types";
 
-export enum beerListActionType {
+export enum BeerListActionType {
   defaultActionType,
   loadBeerList,
 }
 
-export interface beerListAction {
-  type: beerListActionType;
+export interface BeerListAction {
+  type: BeerListActionType;
   payload?: unknown;
 }
 
-export interface LoadBeerListAction extends beerListAction {
+export interface LoadBeerListAction extends BeerListAction {
   payload: BeerStructure[];
 }

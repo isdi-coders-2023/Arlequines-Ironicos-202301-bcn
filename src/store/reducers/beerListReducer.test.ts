@@ -1,7 +1,7 @@
 import { BeerStructure } from "../../data/types";
 import {
-  beerListAction,
-  beerListActionType,
+  BeerListAction,
+  BeerListActionType,
   LoadBeerListAction,
 } from "../actions/beerList/types";
 import beerListReducer from "./beerListReducer";
@@ -65,7 +65,7 @@ describe("Given the beerListReducer function", () => {
       ];
       const expectedNewBeerList: BeerStructure[] = [];
       const nonExistentAction: LoadBeerListAction = {
-        type: beerListActionType.defaultActionType,
+        type: BeerListActionType.defaultActionType,
         payload: twoBeerListPayload,
       };
 
@@ -129,8 +129,8 @@ describe("Given the beerListReducer function", () => {
           brewers_tips: "",
         },
       ];
-      const loadBeerListAction: beerListAction = {
-        type: beerListActionType.loadBeerList,
+      const loadBeerListAction: BeerListAction = {
+        type: BeerListActionType.loadBeerList,
         payload: expectedNewBeerList,
       };
 
