@@ -1,11 +1,5 @@
-import Home from "./pages/home";
-
 const App = (): JSX.Element => {
-  return (
-    <div className="app">
-      <Home />
-    </div>
-  );
+  return <div className="app"></div>;
 };
 
 export default App;
