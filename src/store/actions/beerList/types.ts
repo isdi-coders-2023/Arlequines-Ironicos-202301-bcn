@@ -1,6 +1,7 @@
 import { BeerStructure } from "../../../data/types";
 
 export enum beerListActionType {
+  defaultActionType,
   loadBeerList,
 }
 
