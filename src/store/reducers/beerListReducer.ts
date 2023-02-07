@@ -11,11 +11,11 @@ const beerListReducer = (
 ) => {
   let newBeerList: BeerStructure[];
 
-  if (action.type === BeerListActionType.loadBeerList) {
-    newBeerList = [...(action as LoadBeerListAction).payload];
+  if (action.type !== BeerListActionType.loadBeerList) {
+    newBeerList = currentBeerList;
+    return newBeerList;
   }
-  newBeerList = currentBeerList;
-
+  newBeerList = [...(action as LoadBeerListAction).payload];
   return newBeerList;
 };
 
