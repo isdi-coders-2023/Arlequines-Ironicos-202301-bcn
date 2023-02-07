@@ -1,3 +1,4 @@
+import { BeerStructure } from "../../data/types";
 import {
   beerListAction,
   beerListActionType,
@@ -5,10 +6,10 @@ import {
 } from "../actions/beerList/types";
 
 const beerListReducer = (
-  currentBeerList: unknown[],
+  currentBeerList: BeerStructure[],
   action: beerListAction
 ) => {
-  let newBeerList: unknown;
+  let newBeerList: BeerStructure[];
 
   switch (action.type) {
     case beerListActionType.loadBeerList:
