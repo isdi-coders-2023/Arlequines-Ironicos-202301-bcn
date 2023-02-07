@@ -2,32 +2,6 @@ interface VolumeStructure {
   value: number;
   unit: string;
 }
-
-interface Mash_temp_TempStructure {
-  value: number;
-  unit: string;
-}
-
-interface Mash_tempStructure {
-  temp: Mash_temp_TempStructure;
-  duration: number;
-}
-
-interface Fermentation_temp {
-  value: number;
-  unit: string;
-}
-
-interface FermentationStructure {
-  temp: Fermentation_temp;
-}
-
-interface MethodStructure {
-  mash_temp: Mash_tempStructure;
-  fermentation: FermentationStructure;
-  twist: string;
-}
-
 interface MaltAmountStructure {
   value: number;
   unit: string;
@@ -56,8 +30,8 @@ interface IngredientsStructure {
   yeast: string;
 }
 
-export interface BeersStructure {
-  id: string;
+export interface BeerStructure {
+  id: number;
   name: string;
   tagline: string;
   first_brewed: string;
@@ -65,10 +39,11 @@ export interface BeersStructure {
   image_url: string;
   abv: number;
   ibu: number;
-  ph: number;
   volume: VolumeStructure;
-  method: MethodStructure;
   ingredients: IngredientsStructure;
   food_pairing: string[];
   brewers_tips: string;
+}
+export interface BeerListStructure {
+  BeerList: BeerStructure[];
 }
