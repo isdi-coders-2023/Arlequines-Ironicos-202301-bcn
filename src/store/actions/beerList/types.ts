@@ -6,7 +6,7 @@ export enum beerListActionType {
 
 export interface beerListAction {
   type: beerListActionType;
-  payload: BeerStructure[];
+  payload?: unknown;
 }
 
 export interface LoadBeerListAction extends beerListAction {

@@ -1,13 +1,14 @@
-import { BeerStructure } from "../../../data/types";
-import { loadBeerListActionCreator } from "./beerListActionCreators";
-import { beerListAction, beerListActionType } from "./types";
+import { BeerStructure } from "../../data/types";
+import { beerListAction, beerListActionType } from "../actions/beerList/types";
+import beerListReducer from "./beerListReducer";
 
-describe("Given the beerCardListActionCreator function", () => {
-  describe("When it receives a list of two beers", () => {
-    test("Then it should return an action with type loadBeerList and the two beers as payload", () => {
-      const beerList: BeerStructure[] = [
+describe("Given the beerListReducer function", () => {
+  describe("When it receives an empty list, and a load action with a two beers list payload", () => {
+    test("Then it should return a list of two beers", () => {
+      const initialBeerList: BeerStructure[] = [];
+      const expectedNewBeerList: BeerStructure[] = [
         {
-          id: 1,
+          id: 2,
           name: "Storm",
           tagline: "",
           first_brewed: "",
@@ -32,7 +33,7 @@ describe("Given the beerCardListActionCreator function", () => {
           brewers_tips: "",
         },
         {
-          id: 2,
+          id: 4,
           name: "Pilsen",
           tagline: "",
           first_brewed: "",
@@ -57,14 +58,14 @@ describe("Given the beerCardListActionCreator function", () => {
           brewers_tips: "",
         },
       ];
-      const expectedLoadBeerListAction: beerListAction = {
+      const loadBeerListAction: beerListAction = {
         type: beerListActionType.loadBeerList,
-        payload: beerList,
+        payload: expectedNewBeerList,
       };
 
-      const loadBeerListAction = loadBeerListActionCreator(beerList);
+      const newBeerList = beerListReducer(initialBeerList, loadBeerListAction);
 
-      expect(loadBeerListAction).toStrictEqual(expectedLoadBeerListAction);
+      expect(newBeerList).toStrictEqual(expectedNewBeerList);
     });
   });
 });
