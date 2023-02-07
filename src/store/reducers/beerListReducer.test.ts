@@ -1,4 +1,4 @@
-import { BeerStructure } from "../../data/types";
+import { BeerListStructure } from "../../data/types";
 import {
   BeerListAction,
   BeerListActionType,
@@ -7,11 +7,11 @@ import {
 import beerListReducer from "./beerListReducer";
 
 describe("Given the beerListReducer function", () => {
-  const initialBeerList: BeerStructure[] = [];
+  const initialBeerList: BeerListStructure = [];
 
   describe("When it receives an empty list and an action with a type that doesn't exist and a list of two beers", () => {
     test("Then it should return an empty list", () => {
-      const twoBeerListPayload = [
+      const twoBeerListPayload: BeerListStructure = [
         {
           id: 2,
           name: "Storm",
@@ -63,7 +63,7 @@ describe("Given the beerListReducer function", () => {
           brewers_tips: "",
         },
       ];
-      const expectedNewBeerList: BeerStructure[] = [];
+      const expectedNewBeerList: BeerListStructure = [];
       const nonExistentAction: LoadBeerListAction = {
         type: BeerListActionType.defaultActionType,
         payload: twoBeerListPayload,
@@ -77,7 +77,7 @@ describe("Given the beerListReducer function", () => {
 
   describe("When it receives an empty list, and a load action with a two beers list payload", () => {
     test("Then it should return a list of two beers", () => {
-      const expectedNewBeerList: BeerStructure[] = [
+      const expectedNewBeerList: BeerListStructure = [
         {
           id: 2,
           name: "Storm",

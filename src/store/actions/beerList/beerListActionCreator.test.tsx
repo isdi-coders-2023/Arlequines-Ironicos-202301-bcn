@@ -1,11 +1,11 @@
-import { BeerStructure } from "../../../data/types";
+import { BeerListStructure } from "../../../data/types";
 import { loadBeerListActionCreator } from "./beerListActionCreators";
 import { BeerListAction, BeerListActionType } from "./types";
 
 describe("Given the beerCardListActionCreator function", () => {
   describe("When it receives a list of two beers", () => {
     test("Then it should return an action with type loadBeerList and the two beers as payload", () => {
-      const beerList: BeerStructure[] = [
+      const beerList: BeerListStructure = [
         {
           id: 1,
           name: "Storm",

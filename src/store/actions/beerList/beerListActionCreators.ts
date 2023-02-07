@@ -1,8 +1,8 @@
-import { BeerStructure } from "../../../data/types";
+import { BeerListStructure } from "../../../data/types";
 import { BeerListActionType, LoadBeerListAction } from "./types";
 
 export const loadBeerListActionCreator = (
-  beerList: BeerStructure[]
+  beerList: BeerListStructure
 ): LoadBeerListAction => ({
   type: BeerListActionType.loadBeerList,
   payload: beerList,

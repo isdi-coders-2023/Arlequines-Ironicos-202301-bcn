@@ -1,4 +1,4 @@
-import { BeerStructure } from "../../data/types";
+import { BeerListStructure } from "../../data/types";
 import {
   BeerListAction,
   BeerListActionType,
@@ -6,10 +6,10 @@ import {
 } from "../actions/beerList/types";
 
 const beerListReducer = (
-  currentBeerList: BeerStructure[],
+  currentBeerList: BeerListStructure,
   action: BeerListAction
 ) => {
-  let newBeerList: BeerStructure[];
+  let newBeerList: BeerListStructure;
 
   if (action.type !== BeerListActionType.loadBeerList) {
     newBeerList = currentBeerList;
