@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts --coverage --watchAll=false",
+    "test:coverage": "react-scripts test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -43,8 +43,9 @@
     ]
   },
   "devDependencies": {
+    "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3",
-    "husky": "^8.0.0"
+    "msw": "^1.0.0",
+    "prettier": "^2.8.3"
   }
 }
