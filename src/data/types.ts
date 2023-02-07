@@ -1,35 +1,3 @@
-interface VolumeStructure {
-  value: number;
-  unit: string;
-}
-interface MaltAmountStructure {
-  value: number;
-  unit: string;
-}
-
-interface MaltStructure {
-  name: string;
-  amount: MaltAmountStructure;
-}
-
-interface HopsAmountStructure {
-  value: number;
-  unit: string;
-}
-
-interface HopsStructure {
-  name: string;
-  amount: HopsAmountStructure;
-  add: string;
-  attribute: string;
-}
-
-interface IngredientsStructure {
-  malt: MaltStructure[];
-  hops: HopsStructure[];
-  yeast: string;
-}
-
 export interface BeerStructure {
   id: number;
   name: string;
@@ -39,11 +7,30 @@ export interface BeerStructure {
   image_url: string;
   abv: number;
   ibu: number;
-  volume: VolumeStructure;
-  ingredients: IngredientsStructure;
+  volume: {
+    value: number;
+    unit: string;
+  };
+  ingredients: {
+    malt: {
+      name: string;
+      amount: {
+        value: number;
+        unit: string;
+      };
+    };
+    hops: {
+      name: string;
+      amount: {
+        value: number;
+        unit: string;
+      };
+      add: string;
+      attribute: string;
+    };
+    yeast: string;
+  };
   food_pairing: string[];
   brewers_tips: string;
 }
-export interface BeerListStructure {
-  BeerList: BeerStructure[];
-}
+export type BeerListStructure = BeerStructure[];
