@@ -1,3 +1,21 @@
+export interface MaltStructure {
+  name: string;
+  amount: {
+    value: number;
+    unit: string;
+  };
+}
+
+export interface HopStructure {
+  name: string;
+  amount: {
+    value: number;
+    unit: string;
+  };
+  add: string;
+  attribute: string;
+}
+
 export interface BeerStructure {
   id: number;
   name: string;
@@ -12,22 +30,10 @@ export interface BeerStructure {
     unit: string;
   };
   ingredients: {
-    malt: {
-      name: string;
-      amount: {
-        value: number;
-        unit: string;
-      };
-    };
-    hops: {
-      name: string;
-      amount: {
-        value: number;
-        unit: string;
-      };
-      add: string;
-      attribute: string;
-    };
+    malt: MaltStructure[];
+
+    hops: HopStructure[];
+
     yeast: string;
   };
   food_pairing: string[];

@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -20,9 +21,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts --coverage --watchAll=false",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/react-app-env-d.ts",
+      "!src/mocks/handlers.ts"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -43,8 +53,10 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3",
-    "husky": "^8.0.0"
+    "msw": "^1.0.0",
+    "prettier": "^2.8.3"
   }
 }
