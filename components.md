@@ -3,8 +3,9 @@
 # Data layer
 
 - External API data
+- List of beers external data
 - Local API data
-- List of beers (?)
+- List of beers internal data
 - Loading status
 - Modification status
 
@@ -27,54 +28,66 @@
 
 # Components
 
-# Context
+# Contexts
 
-- Contains External API data
-- Contains Local API data
+## UI Context
+
 - Contains Loading status
 - Contains Error status
 
-## Header
+## Data context
+
+- Contains External API data
+- Contains Local API data
+-
 
 # Page Components
 
 ## Brew Beer page
 
 - Renders the form
+- Sends form filled inputs to ...
 
 ## Edit beer page
 
 - Renders the form with filled info
+- Sends from modified inputs ...
 
 ## My beers page
 
+- Receives beer info
+- Calls the action do delete cards
 - Renders card list component
 
 ## Details page
 
+- Receives all beer info
 - Renders details component
 
 ## Home page
 
-- Calls the function to recieve data from external API
+- Recieves beer data from external API
 - Renders card list component
-
-# Components
-
-## List
-
-- Renders 12 beer cards per page
-- Calls the function to delete
+- Renders pagination buttons
+- Receives user action from pagination component
 
 ## 404 Page
 
-- Shows error status
+- Shows error message
 
-## Card list
+# Components
 
-- Renders 12 beer cards per page
-- Calls the function to delete beer
-- Calls de
+## Header
+
+- Renders Brew Beer button
+
+## App
+
+- Renders pages
+
+## Card List
+
+- Renders all cards
 
 ## Cards
 
@@ -92,19 +105,24 @@
 - Shows Error pop up
 - Shows Success pop up
 
-## Nav Buttons
+## Pagination
 
--
+- Render 2 arrow buttons
+- Sends action to Home page
+- Shows the number current page and total pages
 
-## NavBar
+## Navigation Bar
 
 - Contains navigation links
 
 ## Buttons
 
+- Receives actions from user
+- Calls an action
+
 ## Form
 
-- Receives info for new beer:
+- Receives info for beer
 - Input for name
 - Input for description
 - Input for method
@@ -115,7 +133,7 @@
 
 ## Description
 
-- Shows all data of de beer:
+- Shows all data of the beer
 - Name
 - Description
 - Method
