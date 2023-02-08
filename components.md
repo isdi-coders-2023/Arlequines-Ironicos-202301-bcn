@@ -2,7 +2,6 @@
 
 # Data layer
 
-- External API data
 - List of beers external data
 - Local API data
 - List of beers internal data
