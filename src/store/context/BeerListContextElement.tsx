@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useMemo } from "react";
 import beerListReducer from "../reducers/beerListReducer";
 import BeerListContext from "./BeerListContext";
 
@@ -10,8 +10,13 @@ const BeerListContextElement = ({
   children,
 }: BeerListContextElementProps): JSX.Element => {
   const [beerList, dispatch] = useReducer(beerListReducer, []);
+
+  const beerListContextMemo = useMemo(
+    () => ({ beerList, dispatch }),
+    [beerList, dispatch]
+  );
   return (
-    <BeerListContext.Provider value={{ beerList, dispatch }}>
+    <BeerListContext.Provider value={beerListContextMemo}>
       {children}
     </BeerListContext.Provider>
   );
