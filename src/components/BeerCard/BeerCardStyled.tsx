@@ -6,10 +6,10 @@ export const BeerCardStyled = styled.article`
     justify-content: space-between;
     display: flex;
 
-    background-color: #d4d3d3;
+    background-color: var(--color-icon-cream);
     width: 330px;
     height: 534px;
-    border-radius: 20px;
+    border-radius: var(--border-radius-standard);
 
     &__main-content {
       display: flex;
@@ -25,31 +25,31 @@ export const BeerCardStyled = styled.article`
     }
 
     &__alcohol {
-      background-color: #22151f;
-      backdrop-filter: blur(15.1667px);
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif sans-serif;
-      font-size: 25px;
+      background-color: var(--color-primary-dark-grey);
+      backdrop-filter: blur(var(--font-size-tag-line));
+      color: var(--color-primary-white);
+      font-family: var(--font-primary);
+      font-size: var(--font-size-button);
       text-align: center;
       align-items: center;
-      border-radius: 20px 2px;
+      border-radius: var(--border-radius-standard) var(--border-radius-minimum);
       padding: 17px;
       height: 40px;
       width: 85px;
     }
 
     &__name {
-      font-size: 29px;
+      font-size: var(--font-size-title);
       margin: 0px;
     }
 
     &__tagLine {
-      font-size: 16px;
+      font-size: var(--font-size-tag-line);
       margin: 0px;
     }
 
     &__date {
-      font-size: 20px;
+      font-size: var(--font-size-ingredint);
       margin: 0px;
     }
 
@@ -70,17 +70,17 @@ export const BeerCardStyled = styled.article`
       align-items: center;
       width: 350px;
       height: 92px;
-      background-color: #545454;
-      border-radius: 20px;
+      background-color: var(--color-secondary-grey);
+      border-radius: var(--border-radius-standard);
       margin: 20px;
       padding: 26px;
-      font-size: 20px;
+      font-size: var(--font-size-button);
       text-align: left;
-      color: white;
+      color: var(--color-icon-white);
       border: 0 none;
 
       &:hover {
-        background-color: #2c3245;
+        background-color: var(--color-primary-dark-grey);
         transition: 0.7s;
       }
     }
