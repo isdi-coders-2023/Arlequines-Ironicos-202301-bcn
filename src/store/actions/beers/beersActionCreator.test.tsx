@@ -1,11 +1,12 @@
-import { BeerListStructure } from "../../../data/types";
-import { loadBeerListActionCreator } from "./beerListActionCreators";
-import { BeerListAction, BeerListActionType } from "./types";
+import { BeersStructure } from "../../../data/types";
+import { loadBeersActionCreator } from "./beersActionCreators";
+
+import { BeersAction, BeersActionType } from "./types";
 
 describe("Given the beerCardListActionCreator function", () => {
   describe("When it receives a list of two beers", () => {
     test("Then it should return an action with type loadBeerList and the two beers as payload", () => {
-      const beerList: BeerListStructure = [
+      const beers: BeersStructure = [
         {
           id: 1,
           name: "Storm",
@@ -57,14 +58,14 @@ describe("Given the beerCardListActionCreator function", () => {
           brewers_tips: "",
         },
       ];
-      const expectedLoadBeerListAction: BeerListAction = {
-        type: BeerListActionType.loadBeerList,
-        payload: beerList,
+      const expectedLoadBeersAction: BeersAction = {
+        type: BeersActionType.loadBeers,
+        payload: beers,
       };
 
-      const loadBeerListAction = loadBeerListActionCreator(beerList);
+      const loadBeersAction = loadBeersActionCreator(beers);
 
-      expect(loadBeerListAction).toStrictEqual(expectedLoadBeerListAction);
+      expect(loadBeersAction).toStrictEqual(expectedLoadBeersAction);
     });
   });
 });

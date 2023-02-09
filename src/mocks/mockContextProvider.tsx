@@ -1,4 +1,4 @@
-import BeerListContext from "../store/context/BeerListContext";
+import BeersContext from "../store/contexts/beers/BeersContext";
 import { mockContext } from "./mockStore";
 
 interface WrapperProps {
@@ -7,8 +7,8 @@ interface WrapperProps {
 
 export const Wrapper = ({ children }: WrapperProps): JSX.Element => {
   return (
-    <BeerListContext.Provider value={mockContext}>
+    <BeersContext.Provider value={mockContext}>
       {children}
-    </BeerListContext.Provider>
+    </BeersContext.Provider>
   );
 };

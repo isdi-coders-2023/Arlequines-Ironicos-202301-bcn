@@ -1,23 +1,24 @@
-import { BeerListStructure } from "../data/types";
+import { BeersStructure } from "../../data/types";
 import { useContext, useCallback } from "react";
-import { loadBeerListActionCreator } from "../store/actions/beerList/beerListActionCreators";
-import BeerListContext from "../store/context/BeerListContext";
+
+import BeersContext from "../../store/contexts/beers/BeersContext";
+import { loadBeersActionCreator } from "../../store/actions/beers/beersActionCreators";
 
 export const currentPage = 1;
 export const beersPerPage = 1;
 export const beerApiUrl = "https://api.punkapi.com/v2/beers?";
 
 const useBeerApi = () => {
-  const { dispatch } = useContext(BeerListContext);
+  const { dispatch } = useContext(BeersContext);
 
   const getBeersFromApi = useCallback(async () => {
     const responseFromBeerApi = await fetch(
       `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}`
     );
     const beerListInformation =
-      (await responseFromBeerApi.json()) as BeerListStructure;
+      (await responseFromBeerApi.json()) as BeersStructure;
 
-    dispatch(loadBeerListActionCreator(beerListInformation));
+    dispatch(loadBeersActionCreator(beerListInformation));
   }, [dispatch]);
 
   return { getBeersFromApi };
