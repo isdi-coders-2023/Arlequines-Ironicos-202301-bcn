@@ -69,5 +69,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-secondary)
   }
 
+  a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
 `;
 export default GlobalStyle;
