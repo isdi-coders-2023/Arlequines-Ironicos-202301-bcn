@@ -33,7 +33,9 @@
       "src/**/*.tsx",
       "!src/index.tsx",
       "!src/react-app-env-d.ts",
-      "!src/mocks/handlers.ts"
+      "!src/mocks/handlers.ts",
+      "!src/setupTests.ts",
+      "!src/App.tsx"
     ]
   },
   "eslintConfig": {
