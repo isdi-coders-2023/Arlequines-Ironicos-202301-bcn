@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const BeerCardStyled = styled.article`
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  background-color: #d4d3d3;
+  width: 330px;
+  height: 534px;
+  border-radius: 20px;
+
   .beer-card {
-    flex-direction: column;
-    justify-content: space-between;
-    display: flex;
-
-    background-color: var(--color-icon-cream);
-    width: 330px;
-    height: 534px;
-    border-radius: var(--border-radius-standard);
-
     &__main-content {
       display: flex;
       margin: 20px;
@@ -25,31 +24,31 @@ export const BeerCardStyled = styled.article`
     }
 
     &__alcohol {
-      background-color: var(--color-primary-dark-grey);
-      backdrop-filter: blur(var(--font-size-tag-line));
-      color: var(--color-primary-white);
-      font-family: var(--font-primary);
-      font-size: var(--font-size-button);
+      background-color: #22151f;
+      backdrop-filter: blur(15.1667px);
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif sans-serif;
+      font-size: 25px;
       text-align: center;
       align-items: center;
-      border-radius: var(--border-radius-standard) var(--border-radius-minimum);
+      border-radius: 20px 2px;
       padding: 17px;
       height: 40px;
       width: 85px;
     }
 
     &__name {
-      font-size: var(--font-size-title);
+      font-size: 29px;
       margin: 0px;
     }
 
     &__tagLine {
-      font-size: var(--font-size-tag-line);
+      font-size: 16px;
       margin: 0px;
     }
 
     &__date {
-      font-size: var(--font-size-ingredint);
+      font-size: 20px;
       margin: 0px;
     }
 
@@ -70,17 +69,17 @@ export const BeerCardStyled = styled.article`
       align-items: center;
       width: 350px;
       height: 92px;
-      background-color: var(--color-secondary-grey);
-      border-radius: var(--border-radius-standard);
+      background-color: #545454;
+      border-radius: 20px;
       margin: 20px;
       padding: 26px;
-      font-size: var(--font-size-button);
+      font-size: 20px;
       text-align: left;
-      color: var(--color-icon-white);
+      color: white;
       border: 0 none;
 
       &:hover {
-        background-color: var(--color-primary-dark-grey);
+        background-color: #2c3245;
         transition: 0.7s;
       }
     }
