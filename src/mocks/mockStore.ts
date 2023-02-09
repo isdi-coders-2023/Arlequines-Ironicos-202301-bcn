@@ -7,12 +7,12 @@ import {
 export const beerList: BeerListStructure = [];
 export const dispatch = jest.fn();
 
-export interface mockContextStructure {
+export interface MockContextStructure {
   dispatch: React.Dispatch<BeerListAction>;
   beerList: BeerListStructure;
 }
 
-export const mockContext: mockContextStructure = {
+export const mockContext: MockContextStructure = {
   dispatch,
   beerList: [] as BeerListStructure,
 };

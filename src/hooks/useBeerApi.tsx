@@ -3,13 +3,14 @@ import { useContext, useCallback } from "react";
 import { loadBeerListActionCreator } from "../store/actions/beerList/beerListActionCreators";
 import BeerListContext from "../store/context/BeerListContext";
 
+export const currentPage = 1;
+export const beersPerPage = 1;
+export const beerApiUrl = "https://api.punkapi.com/v2/beers?";
+
 const useBeerApi = () => {
   const { dispatch } = useContext(BeerListContext);
 
   const getBeersFromApi = useCallback(async () => {
-    const currentPage = 1;
-    const beersPerPage = 12;
-    const beerApiUrl = process.env.REACT_APP_PUNKAPI;
     const responseFromBeerApi = await fetch(
       `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}`
     );
