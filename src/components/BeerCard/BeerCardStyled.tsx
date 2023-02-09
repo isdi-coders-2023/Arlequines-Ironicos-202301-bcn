@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const BeerCardStyled = styled.article`
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  background-color: #d4d3d3;
+  width: 330px;
+  height: 534px;
+  border-radius: 20px;
+
   .beer-card {
-    flex-direction: column;
-    justify-content: space-between;
-    display: flex;
-
-    background-color: #d4d3d3;
-    width: 330px;
-    height: 534px;
-    border-radius: 20px;
-
     &__main-content {
       display: flex;
       margin: 20px;
