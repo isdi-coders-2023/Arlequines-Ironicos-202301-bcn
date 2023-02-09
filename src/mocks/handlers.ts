@@ -1,5 +1,9 @@
 import { rest } from "msw";
-import { beerApiUrl, beersPerPage, currentPage } from "../hooks/useBeerApi";
+import {
+  beerApiUrl,
+  beersPerPage,
+  currentPage,
+} from "../hooks/useBeerApi/useBeerApi";
 
 export const handlers = [
   rest.get(

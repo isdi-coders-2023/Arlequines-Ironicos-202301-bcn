@@ -1,17 +1,18 @@
-import { BeerListStructure } from "../../data/types";
+import { BeersStructure } from "../../../data/types";
 import {
-  BeerListAction,
-  BeerListActionType,
-  LoadBeerListAction,
-} from "../actions/beerList/types";
-import beerListReducer from "./beerListReducer";
+  BeersAction,
+  BeersActionType,
+  LoadBeersAction,
+} from "../../actions/beers/types";
+
+import beersReducer from "./beersReducer";
 
 describe("Given the beerListReducer function", () => {
-  const initialBeerList: BeerListStructure = [];
+  const initialBeers: BeersStructure = [];
 
   describe("When it receives an empty list and an action with a type that doesn't exist and a list of two beers", () => {
     test("Then it should return an empty list", () => {
-      const twoBeerListPayload: BeerListStructure = [
+      const twoBeersPayload: BeersStructure = [
         {
           id: 2,
           name: "Storm",
@@ -63,21 +64,21 @@ describe("Given the beerListReducer function", () => {
           brewers_tips: "",
         },
       ];
-      const expectedNewBeerList: BeerListStructure = [];
-      const nonExistentAction: LoadBeerListAction = {
-        type: "" as unknown as BeerListActionType,
-        payload: twoBeerListPayload,
+      const expectedNewBeers: BeersStructure = [];
+      const nonExistentAction: LoadBeersAction = {
+        type: "" as unknown as BeersActionType,
+        payload: twoBeersPayload,
       };
 
-      const newBeerList = beerListReducer(initialBeerList, nonExistentAction);
+      const newBeers = beersReducer(initialBeers, nonExistentAction);
 
-      expect(newBeerList).toStrictEqual(expectedNewBeerList);
+      expect(newBeers).toStrictEqual(expectedNewBeers);
     });
   });
 
   describe("When it receives an empty list, and a load action with a two beers list payload", () => {
     test("Then it should return a list of two beers", () => {
-      const expectedNewBeerList: BeerListStructure = [
+      const expectedNewBeers: BeersStructure = [
         {
           id: 2,
           name: "Storm",
@@ -129,14 +130,14 @@ describe("Given the beerListReducer function", () => {
           brewers_tips: "",
         },
       ];
-      const loadBeerListAction: BeerListAction = {
-        type: BeerListActionType.loadBeerList,
-        payload: expectedNewBeerList,
+      const loadBeersAction: BeersAction = {
+        type: BeersActionType.loadBeers,
+        payload: expectedNewBeers,
       };
 
-      const newBeerList = beerListReducer(initialBeerList, loadBeerListAction);
+      const newBeers = beersReducer(initialBeers, loadBeersAction);
 
-      expect(newBeerList).toStrictEqual(expectedNewBeerList);
+      expect(newBeers).toStrictEqual(expectedNewBeers);
     });
   });
 });

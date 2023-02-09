@@ -39,4 +39,4 @@ export interface BeerStructure {
   food_pairing: string[];
   brewers_tips: string;
 }
-export type BeerListStructure = BeerStructure[];
+export type BeersStructure = BeerStructure[];

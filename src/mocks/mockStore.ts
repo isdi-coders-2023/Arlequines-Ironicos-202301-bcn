@@ -1,24 +1,21 @@
-import { BeerListStructure } from "../data/types";
-import {
-  BeerListAction,
-  BeerListActionType,
-} from "../store/actions/beerList/types";
+import { BeersStructure } from "../data/types";
+import { BeersAction, BeersActionType } from "../store/actions/beers/types";
 
-export const beerList: BeerListStructure = [];
+export const beers: BeersStructure = [];
 export const dispatch = jest.fn();
 
 export interface MockContextStructure {
-  dispatch: React.Dispatch<BeerListAction>;
-  beerList: BeerListStructure;
+  dispatch: React.Dispatch<BeersAction>;
+  beers: BeersStructure;
 }
 
 export const mockContext: MockContextStructure = {
   dispatch,
-  beerList: [] as BeerListStructure,
+  beers: [] as BeersStructure,
 };
 
-export const mockLoadBeerListAction = {
-  type: BeerListActionType.loadBeerList,
-  payload: beerList,
+export const mockLoadBeersAction = {
+  type: BeersActionType.loadBeers,
+  payload: beers,
 };
 export const mockDispatch = jest.spyOn(mockContext, "dispatch");

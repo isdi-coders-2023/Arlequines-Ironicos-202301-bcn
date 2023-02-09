@@ -1,4 +1,4 @@
-import useBeerApi from "./hooks/useBeerApi";
+import useBeerApi from "./hooks/useBeerApi/useBeerApi";
 import { useEffect } from "react";
 
 const App = (): JSX.Element => {

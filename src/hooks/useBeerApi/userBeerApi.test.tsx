@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from "@testing-library/react";
-import { Wrapper } from "../mocks/mockContextProvider";
-import { mockDispatch } from "../mocks/mockStore";
+import { Wrapper } from "../../mocks/mockContextProvider";
+import { mockDispatch } from "../../mocks/mockStore";
 import useBeerApi from "./useBeerApi";
 
 describe("Given a useBeerApi custom hook", () => {
