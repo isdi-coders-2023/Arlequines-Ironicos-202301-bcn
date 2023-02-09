@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import BeerListContextElement from "./store/context/BeerListContextElement";
+import BeerListContextWrapper from "./store/context/BeerListContextWrapper";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BeerListContextElement>
+    <BeerListContextWrapper>
       <App />
-    </BeerListContextElement>
+    </BeerListContextWrapper>
   </React.StrictMode>
 );

@@ -65,7 +65,7 @@ describe("Given the beerListReducer function", () => {
       ];
       const expectedNewBeerList: BeerListStructure = [];
       const nonExistentAction: LoadBeerListAction = {
-        type: BeerListActionType.defaultActionType,
+        type: "" as unknown as BeerListActionType,
         payload: twoBeerListPayload,
       };
 

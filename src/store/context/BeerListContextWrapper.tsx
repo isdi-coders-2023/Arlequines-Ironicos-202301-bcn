@@ -2,18 +2,18 @@ import { useReducer, useMemo } from "react";
 import beerListReducer from "../reducers/beerListReducer";
 import BeerListContext from "./BeerListContext";
 
-interface BeerListContextElementProps {
+export interface BeerListContextElementProps {
   children: JSX.Element | JSX.Element[];
 }
 
-const BeerListContextElement = ({
+const BeerListContextWrapper = ({
   children,
 }: BeerListContextElementProps): JSX.Element => {
   const [beerList, dispatch] = useReducer(beerListReducer, []);
 
   const beerListContextMemo = useMemo(
     () => ({ beerList, dispatch }),
-    [beerList, dispatch]
+    [beerList]
   );
   return (
     <BeerListContext.Provider value={beerListContextMemo}>
@@ -22,4 +22,4 @@ const BeerListContextElement = ({
   );
 };
 
-export default BeerListContextElement;
+export default BeerListContextWrapper;
