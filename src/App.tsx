@@ -6,9 +6,7 @@ const App = (): JSX.Element => {
   const { getBeersFromApi } = useBeerApi();
 
   useEffect(() => {
-    (async () => {
-      getBeersFromApi();
-    })();
+    getBeersFromApi();
   }, [getBeersFromApi]);
 
   return (
