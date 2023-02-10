@@ -16,13 +16,12 @@
 - Success modificating beer
 - Error modificating beer
 
-- Add to my beers function
-- Edit beer data function
-- Delete beer function
-- Search function
-- Nav function
-
-- Filter function
+- Add to my beers
+- Edit beer data
+- Delete beer
+- Search
+- Nav
+- Filter
 
 # Components
 

@@ -7,6 +7,6 @@ interface BeersContextStructure {
   dispatch: React.Dispatch<BeersAction>;
 }
 
-const BeerListContext = createContext({} as BeersContextStructure);
+const BeersContext = createContext({} as BeersContextStructure);
 
-export default BeerListContext;
+export default BeersContext;
