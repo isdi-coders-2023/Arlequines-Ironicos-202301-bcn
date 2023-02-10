@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import GlobalStyles from "./GlobalStyles";
 import BeersContextWrapper from "./store/contexts/beers/BeersContextWrapper";
+import UiContextWrapper from "./store/contexts/ui/UiContextWrapper";
 
 const router = createBrowserRouter([
   {
@@ -18,9 +19,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BeersContextWrapper>
-      <GlobalStyles />
-      <RouterProvider router={router} />
-    </BeersContextWrapper>
+    <UiContextWrapper>
+      <BeersContextWrapper>
+        <GlobalStyles />
+        <RouterProvider router={router} />
+      </BeersContextWrapper>
+    </UiContextWrapper>
   </React.StrictMode>
 );
