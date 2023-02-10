@@ -1,16 +1,11 @@
-import useBeerApi from "./hooks/useBeerApi/useBeerApi";
-import { useEffect } from "react";
+import HomePage from "./pages/HomePage/HomePage";
 
 const App = (): JSX.Element => {
-  const { getBeersFromApi } = useBeerApi();
-
-  useEffect(() => {
-    (async () => {
-      getBeersFromApi();
-    })();
-  }, [getBeersFromApi]);
-
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <HomePage />
+    </div>
+  );
 };
 
 export default App;
