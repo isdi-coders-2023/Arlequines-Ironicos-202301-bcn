@@ -1,13 +1,9 @@
 import { NewtonsCradle } from "@uiball/loaders";
+import { IsLoadingStyled } from "./IsLoadingStyled";
 
-interface IsLoadingProps {
-  isLoading: boolean;
-}
-
-const Isloading = (isLoading: IsLoadingProps): JSX.Element => {
+const Isloading = (): JSX.Element => {
   return (
-    <>
-      <NewtonsCradle size={40} speed={1.4} color="black" />
+    <IsLoadingStyled>
       <svg
         width="205"
         height="168"
@@ -28,7 +24,8 @@ const Isloading = (isLoading: IsLoadingProps): JSX.Element => {
           fill="#22151F"
         />
       </svg>
-    </>
+      <NewtonsCradle size={60} speed={1.4} color="black" />
+    </IsLoadingStyled>
   );
 };
 
