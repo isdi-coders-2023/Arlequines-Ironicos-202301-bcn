@@ -22,37 +22,9 @@ export const handlers = [
             image_url: "https://images.punkapi.com/v2/keg.png",
             abv: 4.5,
             ibu: 60,
-            target_fg: 1010,
-            target_og: 1044,
-            ebc: 20,
-            srm: 10,
-            ph: 4.4,
-            attenuation_level: 75,
             volume: {
               value: 20,
               unit: "litres",
-            },
-            boil_volume: {
-              value: 25,
-              unit: "litres",
-            },
-            method: {
-              mash_temp: [
-                {
-                  temp: {
-                    value: 64,
-                    unit: "celsius",
-                  },
-                  duration: 75,
-                },
-              ],
-              fermentation: {
-                temp: {
-                  value: 19,
-                  unit: "celsius",
-                },
-              },
-              twist: null,
             },
             ingredients: {
               malt: [
@@ -134,7 +106,6 @@ export const handlers = [
             ],
             brewers_tips:
               "The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.",
-            contributed_by: "Sam Mason <samjbmason>",
           },
         ])
       );
