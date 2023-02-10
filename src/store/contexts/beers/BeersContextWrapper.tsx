@@ -11,9 +11,9 @@ const BeersContextWrapper = ({
 }: BeersContextElementProps): JSX.Element => {
   const [beers, dispatch] = useReducer(beersReducer, []);
 
-  const beersContextMemo = useMemo(() => ({ beers, dispatch }), [beers]);
+  const beersContextStore = useMemo(() => ({ beers, dispatch }), [beers]);
   return (
-    <BeersContext.Provider value={beersContextMemo}>
+    <BeersContext.Provider value={beersContextStore}>
       {children}
     </BeersContext.Provider>
   );
