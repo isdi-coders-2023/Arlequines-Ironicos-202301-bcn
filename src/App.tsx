@@ -1,10 +1,10 @@
-import Isloading from "./components/IsLoading/IsLoading";
+import Loader from "./components/Loader/Loader";
 
 const App = (): JSX.Element => {
   return (
     <div className="app">
       isloading?
-      <Isloading />
+      <Loader />
     </div>
   );
 };

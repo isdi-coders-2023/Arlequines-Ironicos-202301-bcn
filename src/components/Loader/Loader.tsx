@@ -1,10 +1,11 @@
 import { NewtonsCradle } from "@uiball/loaders";
-import { IsLoadingStyled } from "./IsLoadingStyled";
+import { LoaderStyled } from "./LoaderStyled";
 
-const Isloading = (): JSX.Element => {
+const Loader = (): JSX.Element => {
   return (
-    <IsLoadingStyled>
+    <LoaderStyled>
       <svg
+        aria-label="logo of a beer"
         width="205"
         height="168"
         viewBox="0 0 205 168"
@@ -24,9 +25,9 @@ const Isloading = (): JSX.Element => {
           fill="#22151F"
         />
       </svg>
-      <NewtonsCradle size={60} speed={1.4} color="black" />
-    </IsLoadingStyled>
+      <NewtonsCradle size={60} speed={1.4} color="rgba(239, 228, 200, 1)" />
+    </LoaderStyled>
   );
 };
 
-export default Isloading;
+export default Loader;

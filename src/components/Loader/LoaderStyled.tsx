@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const IsLoadingStyled = styled.div`
+export const LoaderStyled = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
