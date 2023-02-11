@@ -12,6 +12,7 @@ export const BeerCardStyled = styled.article`
   width: 330px;
   height: 534px;
   border-radius: var(--border-radius-standard);
+  box-shadow: var(--box-shadow-default);
 
   .beer-card {
     &__main-content {
@@ -84,10 +85,14 @@ export const BeerCardStyled = styled.article`
       text-align: left;
       color: var(--color-icon-white);
       border: 0 none;
+      transition: 0.3s;
 
       &:hover {
         background-color: var(--color-primary-dark-grey);
-        transition: 0.7s;
+        transition: 0.3s;
+      }
+      &__button-icon {
+        background-color: var(--color-primary-dark-grey);
       }
     }
   }

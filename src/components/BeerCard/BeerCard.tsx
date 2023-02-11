@@ -6,10 +6,10 @@ interface BeerCardProps {
 }
 
 const BeerCard = ({
-  beer: { name, abv, tagline, imageUrl, firstBrewed },
+  beer: { name, abv, tagline, imageUrl, firstBrewed, id },
 }: BeerCardProps): JSX.Element => {
   return (
-    <BeerCardStyled className="beer-card">
+    <BeerCardStyled className={`beer-card${id % 2 !== 0 ? "-odd" : "-pair"}`}>
       <div className="beer-card__main-content">
         <div className="beer-card__description">
           <span className="beer-card__alcohol">{`${abv}º`}</span>
@@ -20,7 +20,11 @@ const BeerCard = ({
         <div className="beer-card__photo-container">
           <img
             className="beer-card__photo"
-            src={`${imageUrl}`}
+            src={`${
+              imageUrl === "https://images.punkapi.com/v2/keg.png"
+                ? "media/keg.png"
+                : imageUrl
+            }`}
             alt={`${name} beer`}
             width={92}
             height={350}
