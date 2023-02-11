@@ -1,4 +1,4 @@
-import { BeersStructure } from "../data/types";
+import { BeersStructure } from "../../data/types";
 
 const convertKebabCaseToCamelCase = (beers: BeersStructure) => {
   return beers.map((beer) => {

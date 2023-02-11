@@ -7,6 +7,7 @@ describe("Given a useBeerApi custom hook", () => {
   describe("When called inside a component", () => {
     test("Then it should call the dispatcher", async () => {
       const dispatch = mockDispatch;
+
       const {
         result: {
           current: { getBeersFromApi },
