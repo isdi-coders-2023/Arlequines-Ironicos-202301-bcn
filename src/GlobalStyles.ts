@@ -39,8 +39,8 @@ const GlobalStyles = createGlobalStyle`
 
     --border-radius-standard: 20px;
     --border-radius-minimum: 2px;
-    --box-shadow-default:  rgba(50, 50, 93, 0.2) 0px 20px 30px -6px,
-    rgba(0, 0, 0, 0.2) 0px 8px 18px -9px;
+    --box-shadow-default:  rgba(50, 50, 93, 0.15) 0px 10px 15px -6px,
+    rgba(0, 0, 0, 0.15) 0px 8px 18px -9px;
 
   }
 
