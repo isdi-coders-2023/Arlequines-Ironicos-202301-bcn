@@ -4,7 +4,7 @@ import {
   beersPerPage,
   currentPage,
 } from "../hooks/useBeerApi/useBeerApi";
-import convertKebabCaseToCamelCase from "../utils/toCamelCase";
+import convertKebabCaseToCamelCase from "../utils/convertKebabCaseToCamelCase/convertKebabCaseToCamelCase";
 import handlerBody from "./handlerResponseBody";
 
 export const handlers = [

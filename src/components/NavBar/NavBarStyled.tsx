@@ -4,7 +4,6 @@ const NavBarStyled = styled.nav`
   position: fixed;
   height: 70px;
   bottom: 0;
-  border-top: solid var(--color-button-brown);
   width: 100vw;
   background-color: var(--color-primary-white);
   z-index: 10;
@@ -17,8 +16,6 @@ const NavBarStyled = styled.nav`
 
   @media only screen and (min-width: 768px) {
     position: relative;
-    right: 0;
-    border: none;
     width: 24.375rem;
   }
 `;

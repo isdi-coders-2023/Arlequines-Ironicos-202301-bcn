@@ -3,7 +3,7 @@ import { useContext, useCallback } from "react";
 
 import BeersContext from "../../store/contexts/beers/BeersContext";
 import { loadBeersActionCreator } from "../../store/actions/beers/beersActionCreators";
-import convertKebabCaseToCamelCase from "../../utils/toCamelCase";
+import convertKebabCaseToCamelCase from "../../utils/convertKebabCaseToCamelCase/convertKebabCaseToCamelCase";
 
 export const currentPage = 1;
 export const beersPerPage = 12;
