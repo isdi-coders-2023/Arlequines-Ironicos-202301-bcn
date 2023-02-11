@@ -39,6 +39,8 @@ const GlobalStyle = createGlobalStyle`
 
     --border-radius-standard: 20px;
     --border-radius-minimum: 2px;
+    --box-shadow-default:  rgba(50, 50, 93, 0.2) 0px 20px 30px -6px,
+    rgba(0, 0, 0, 0.2) 0px 8px 18px -9px;
 
   }
 
@@ -73,6 +75,15 @@ const GlobalStyle = createGlobalStyle`
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+.beer-card {
+  &-odd {
+    background-color: var(--color-secondary-light-grey);
+  }
+  &-pair {
+    background-color: var(--color-secondary-light-ocher);
+  }
 }
 
 `;
