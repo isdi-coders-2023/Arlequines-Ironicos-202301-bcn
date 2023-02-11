@@ -4,7 +4,7 @@ import {
   BeersActionType,
   LoadBeersAction,
 } from "../store/actions/beers/types";
-import convertKebabCaseToCamelCase from "../utils/toCamelCase";
+import convertKebabCaseToCamelCase from "../utils/convertKebabCaseToCamelCase/convertKebabCaseToCamelCase";
 import handlerBody from "./handlerResponseBody";
 
 export const dispatch: React.Dispatch<BeersAction> = jest.fn();
