@@ -3,7 +3,6 @@ import { useContext, useCallback } from "react";
 
 import BeersContext from "../../store/contexts/beers/BeersContext";
 import { loadBeersActionCreator } from "../../store/actions/beers/beersActionCreators";
-
 export const currentPage = 1;
 export const beersPerPage = 12;
 export const beerApiUrl = "https://api.punkapi.com/v2/beers?";
