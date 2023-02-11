@@ -4,6 +4,7 @@ export const BeerCardStyled = styled.article`
   flex-direction: column;
   justify-content: space-between;
   display: flex;
+  margin: 25px;
 
   background-color: var(--color-icon-cream);
   width: 330px;
@@ -33,14 +34,17 @@ export const BeerCardStyled = styled.article`
       text-align: center;
       align-items: center;
       border-radius: var(--border-radius-standard) var(--border-radius-minimum);
-      padding: 17px;
-      height: 40px;
+      padding: 15px;
+      height: 60px;
       width: 85px;
     }
 
     &__name {
       font-size: var(--font-size-title);
       margin: 0px;
+      padding-top: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &__tagLine {
@@ -57,7 +61,7 @@ export const BeerCardStyled = styled.article`
       flex: 1;
       display: flex;
       justify-content: center;
-      max-width: 100vh;
+      max-width: 100vw;
     }
 
     &__button-section {
