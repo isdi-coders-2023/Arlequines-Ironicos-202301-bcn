@@ -1,9 +1,9 @@
 import { createContext } from "react";
-import { BeersStructure } from "../../../data/types";
+import { CamelCaseBeersStructure } from "../../../data/types";
 import { BeersAction } from "../../actions/beers/types";
 
 interface BeersContextStructure {
-  beers: BeersStructure;
+  beers: CamelCaseBeersStructure;
   dispatch: React.Dispatch<BeersAction>;
 }
 

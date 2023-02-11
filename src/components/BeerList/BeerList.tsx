@@ -1,9 +1,9 @@
-import { BeersStructure } from "../../data/types";
+import { CamelCaseBeersStructure } from "../../data/types";
 import BeerCard from "../BeerCard/BeerCard";
 import { BeerListStyled } from "./BeerListStyed";
 
 interface BeerListProps {
-  beers: BeersStructure;
+  beers: CamelCaseBeersStructure;
 }
 
 const BeerList = ({ beers }: BeerListProps): JSX.Element => {

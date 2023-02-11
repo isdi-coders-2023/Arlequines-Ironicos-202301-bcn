@@ -1,12 +1,12 @@
-import { BeerStructure } from "../../data/types";
+import { CamelCaseBeerStructure } from "../../data/types";
 import { BeerCardStyled } from "./BeerCardStyled";
 
 interface BeerCardProps {
-  beer: BeerStructure;
+  beer: CamelCaseBeerStructure;
 }
 
 const BeerCard = ({
-  beer: { name, abv, tagline, image_url, first_brewed },
+  beer: { name, abv, tagline, imageUrl, firstBrewed },
 }: BeerCardProps): JSX.Element => {
   return (
     <BeerCardStyled className="beer-card">
@@ -15,12 +15,12 @@ const BeerCard = ({
           <span className="beer-card__alcohol">{`${abv}º`}</span>
           <h2 className="beer-card__name">{`${name}`}</h2>
           <p className="beer-card__tagLine">{`${tagline}`}</p>
-          <span className="beer-card__date">{`${first_brewed}`}</span>
+          <span className="beer-card__date">{`${firstBrewed}`}</span>
         </div>
         <div className="beer-card__photo-container">
           <img
             className="beer-card__photo"
-            src={`${image_url}`}
+            src={`${imageUrl}`}
             alt={`${name} beer`}
             width={92}
             height={350}

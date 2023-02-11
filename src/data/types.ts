@@ -40,3 +40,29 @@ export interface BeerStructure {
   brewers_tips: string;
 }
 export type BeersStructure = BeerStructure[];
+
+export interface CamelCaseBeerStructure {
+  id: number;
+  name: string;
+  tagline: string;
+  firstBrewed: string;
+  description: string;
+  imageUrl: string;
+  abv: number;
+  ibu: number;
+  volume: {
+    value: number;
+    unit: string;
+  };
+  ingredients: {
+    malt: MaltStructure[];
+
+    hops: HopStructure[];
+
+    yeast: string;
+  };
+  foodPairing: string[];
+  brewersTips: string;
+}
+
+export type CamelCaseBeersStructure = CamelCaseBeerStructure[];

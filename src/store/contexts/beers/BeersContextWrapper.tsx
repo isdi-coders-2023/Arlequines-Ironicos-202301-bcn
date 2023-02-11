@@ -14,9 +14,9 @@ const BeersContextWrapper = ({
       id: 0,
       name: "",
       tagline: "",
-      first_brewed: "",
+      firstBrewed: "",
       description: "",
-      image_url: "",
+      imageUrl: "",
       abv: 0,
       ibu: 0,
       volume: {
@@ -48,8 +48,8 @@ const BeersContextWrapper = ({
 
         yeast: "",
       },
-      food_pairing: [""],
-      brewers_tips: "",
+      foodPairing: [""],
+      brewersTips: "",
     },
   ]);
 
