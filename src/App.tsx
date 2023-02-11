@@ -1,8 +1,5 @@
-import Loader from "./components/Loader/Loader";
-
 import useBeerApi from "./hooks/useBeerApi/useBeerApi";
 import { useEffect } from "react";
-import NavBar from "./components/NavBar/NavBar";
 
 const App = (): JSX.Element => {
   const { getBeersFromApi } = useBeerApi();
@@ -11,13 +8,7 @@ const App = (): JSX.Element => {
     getBeersFromApi();
   }, [getBeersFromApi]);
 
-  return (
-    <div className="app">
-      isloading?
-      <Loader />
-      <NavBar />
-    </div>
-  );
+  return <div className="app"></div>;
 };
 
 export default App;

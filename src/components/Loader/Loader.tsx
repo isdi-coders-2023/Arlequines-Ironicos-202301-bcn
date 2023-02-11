@@ -1,11 +1,9 @@
-import { NewtonsCradle } from "@uiball/loaders";
 import { LoaderStyled } from "./LoaderStyled";
 
 const Loader = (): JSX.Element => {
   return (
-    <LoaderStyled>
+    <LoaderStyled aria-label="page is loading..." role="dialog">
       <svg
-        aria-label="logo of a beer"
         width="205"
         height="168"
         viewBox="0 0 205 168"
@@ -25,7 +23,12 @@ const Loader = (): JSX.Element => {
           fill="#22151F"
         />
       </svg>
-      <NewtonsCradle size={60} speed={1.4} color="rgba(239, 228, 200, 1)" />
+      <div className="newtons-cradle">
+        <div className="newtons-cradle__dot"></div>
+        <div className="newtons-cradle__dot"></div>
+        <div className="newtons-cradle__dot"></div>
+        <div className="newtons-cradle__dot"></div>
+      </div>
     </LoaderStyled>
   );
 };

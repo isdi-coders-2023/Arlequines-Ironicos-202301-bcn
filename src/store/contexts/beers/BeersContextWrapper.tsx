@@ -9,7 +9,49 @@ export interface BeersContextElementProps {
 const BeersContextWrapper = ({
   children,
 }: BeersContextElementProps): JSX.Element => {
-  const [beers, dispatch] = useReducer(beersReducer, []);
+  const [beers, dispatch] = useReducer(beersReducer, [
+    {
+      id: 0,
+      name: "",
+      tagline: "",
+      first_brewed: "",
+      description: "",
+      image_url: "",
+      abv: 0,
+      ibu: 0,
+      volume: {
+        value: 0,
+        unit: "",
+      },
+      ingredients: {
+        malt: [
+          {
+            name: "",
+            amount: {
+              value: 0,
+              unit: "",
+            },
+          },
+        ],
+
+        hops: [
+          {
+            name: "",
+            amount: {
+              value: 0,
+              unit: "",
+            },
+            add: "",
+            attribute: "",
+          },
+        ],
+
+        yeast: "",
+      },
+      food_pairing: [""],
+      brewers_tips: "",
+    },
+  ]);
 
   const beersContextStore = useMemo(() => ({ beers, dispatch }), [beers]);
   return (
