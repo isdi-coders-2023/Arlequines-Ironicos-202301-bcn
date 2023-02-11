@@ -20,7 +20,11 @@ const BeerCard = ({
         <div className="beer-card__photo-container">
           <img
             className="beer-card__photo"
-            src={`${imageUrl}`}
+            src={`${
+              imageUrl === "https://images.punkapi.com/v2/keg.png"
+                ? "media/keg.png"
+                : imageUrl
+            }`}
             alt={`${name} beer`}
             width={92}
             height={350}
