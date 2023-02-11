@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     --font-secondary: "Rosarivo", serif;
 
     --font-size-paragraph: 1.3rem;
-    --font-size-title: 3rem;
+    --font-size-title: 2rem;
     --font-size-card-title: 1.8rem;
     --font-size-tag-line: 1rem;
     --font-size-subtitle: 2.2rem;
