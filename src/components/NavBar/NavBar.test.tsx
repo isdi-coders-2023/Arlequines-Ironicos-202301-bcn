@@ -3,9 +3,9 @@ import NavBar from "./NavBar";
 
 describe("Given a NavBar component", () => {
   describe("When rendered", () => {
-    render(<NavBar />);
-
     test("Then it should render an anchor that leads to Home Page", () => {
+      render(<NavBar />);
+
       const homePageAnchor = screen.getByRole("link", { name: "to Home Page" });
 
       expect(homePageAnchor).toBeInTheDocument();

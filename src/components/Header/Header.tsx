@@ -5,6 +5,8 @@ const Header = (): JSX.Element => {
     <HeaderStyled className="header">
       <div className="brand-logo">
         <svg
+          role={"img"}
+          aria-label="Coders' Brew logo image"
           width="97.42"
           height="80.01"
           viewBox="0 0 205 168"
@@ -25,6 +27,8 @@ const Header = (): JSX.Element => {
           />
         </svg>
         <svg
+          role={"img"}
+          aria-label="Coders' Brew logo text"
           width="157"
           height="81"
           viewBox="0 0 157 81"
