@@ -8,14 +8,9 @@ export const BeerCardStyled = styled.article`
   width: 330px;
   height: 534px;
   border-radius: var(--border-radius-standard);
+  box-shadow: var(--box-shadow-default);
 
   .beer-card {
-    &-odd {
-      background-color: var(--color-secondary-light-grey);
-    }
-    &-pair {
-      background-color: var(--color-icon-cream);
-    }
     &__main-content {
       display: flex;
       margin: 20px;
