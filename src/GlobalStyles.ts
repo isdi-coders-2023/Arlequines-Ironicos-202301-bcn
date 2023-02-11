@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/quicksand";
 import "@fontsource/rosarivo";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 
   :root {
 
@@ -87,4 +87,4 @@ a:active {
 }
 
 `;
-export default GlobalStyle;
+export default GlobalStyles;
