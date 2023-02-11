@@ -1,4 +1,4 @@
-import { BeersStructure } from "../../../data/types";
+import { CamelCaseBeersStructure } from "../../../data/types";
 import { loadBeersActionCreator } from "./beersActionCreators";
 
 import { BeersAction, BeersActionType } from "./types";
@@ -6,14 +6,14 @@ import { BeersAction, BeersActionType } from "./types";
 describe("Given the beerCardListActionCreator function", () => {
   describe("When it receives a list of two beers", () => {
     test("Then it should return an action with type loadBeerList and the two beers as payload", () => {
-      const beers: BeersStructure = [
+      const beers: CamelCaseBeersStructure = [
         {
           id: 1,
           name: "Storm",
           tagline: "",
-          first_brewed: "",
+          firstBrewed: "",
           description: "",
-          image_url: "",
+          imageUrl: "",
           abv: 1,
           ibu: 1,
           volume: { value: 1, unit: "" },
@@ -29,16 +29,16 @@ describe("Given the beerCardListActionCreator function", () => {
             malt: [{ amount: { unit: "", value: 1 }, name: "" }],
             yeast: "",
           },
-          food_pairing: [""],
-          brewers_tips: "",
+          foodPairing: [""],
+          brewersTips: "",
         },
         {
           id: 2,
           name: "Pilsen",
           tagline: "",
-          first_brewed: "",
+          firstBrewed: "",
           description: "",
-          image_url: "",
+          imageUrl: "",
           abv: 1,
           ibu: 1,
           volume: { value: 1, unit: "" },
@@ -54,8 +54,8 @@ describe("Given the beerCardListActionCreator function", () => {
             malt: [{ amount: { unit: "", value: 1 }, name: "" }],
             yeast: "",
           },
-          food_pairing: [""],
-          brewers_tips: "",
+          foodPairing: [""],
+          brewersTips: "",
         },
       ];
       const expectedLoadBeersAction: BeersAction = {

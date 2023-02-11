@@ -1,8 +1,9 @@
-import { BeersStructure } from "../../data/types";
+import { CamelCaseBeersStructure } from "../../data/types";
 import { useContext, useCallback } from "react";
 
 import BeersContext from "../../store/contexts/beers/BeersContext";
 import { loadBeersActionCreator } from "../../store/actions/beers/beersActionCreators";
+import convertKebabCaseToCamelCase from "../../utils/toCamelCase";
 
 export const currentPage = 1;
 export const beersPerPage = 12;
@@ -15,9 +16,9 @@ const useBeerApi = () => {
     const responseFromBeerApi = await fetch(
       `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}`
     );
-    const beerListInformation =
-      (await responseFromBeerApi.json()) as BeersStructure;
-
+    const beerListInformation = convertKebabCaseToCamelCase(
+      await responseFromBeerApi.json()
+    ) as CamelCaseBeersStructure;
     dispatch(loadBeersActionCreator(beerListInformation));
   }, [dispatch]);
 

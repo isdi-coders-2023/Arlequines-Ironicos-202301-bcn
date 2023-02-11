@@ -1,17 +1,19 @@
-import { BeersStructure } from "../data/types";
+import { CamelCaseBeersStructure } from "../data/types";
 import {
   BeersAction,
   BeersActionType,
   LoadBeersAction,
 } from "../store/actions/beers/types";
+import convertKebabCaseToCamelCase from "../utils/toCamelCase";
 import handlerBody from "./handlerResponseBody";
 
 export const dispatch: React.Dispatch<BeersAction> = jest.fn();
-export const beers: BeersStructure = handlerBody;
+export const beers: CamelCaseBeersStructure =
+  convertKebabCaseToCamelCase(handlerBody);
 
 export const mockStore = {
   dispatch,
-  beers: [] as BeersStructure,
+  beers: [] as CamelCaseBeersStructure,
 };
 export const mockDispatch = jest.spyOn(mockStore, "dispatch");
 

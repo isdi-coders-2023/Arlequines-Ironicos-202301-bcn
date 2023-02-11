@@ -1,4 +1,4 @@
-import { BeersStructure } from "../../../data/types";
+import { CamelCaseBeersStructure } from "../../../data/types";
 
 export enum BeersActionType {
   loadBeers,
@@ -10,5 +10,5 @@ export interface BeersAction {
 }
 
 export interface LoadBeersAction extends BeersAction {
-  payload: BeersStructure;
+  payload: CamelCaseBeersStructure;
 }

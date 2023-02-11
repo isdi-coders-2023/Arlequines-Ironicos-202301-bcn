@@ -1,12 +1,15 @@
-import { BeersStructure } from "../../../data/types";
+import { CamelCaseBeersStructure } from "../../../data/types";
 import {
   BeersAction,
   BeersActionType,
   LoadBeersAction,
 } from "../../actions/beers/types";
 
-const beersReducer = (currentBeers: BeersStructure, action: BeersAction) => {
-  let newBeers: BeersStructure;
+const beersReducer = (
+  currentBeers: CamelCaseBeersStructure,
+  action: BeersAction
+) => {
+  let newBeers: CamelCaseBeersStructure;
 
   if (action.type !== BeersActionType.loadBeers) {
     newBeers = currentBeers;
