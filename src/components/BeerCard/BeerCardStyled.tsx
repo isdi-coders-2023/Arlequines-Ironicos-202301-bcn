@@ -5,13 +5,17 @@ export const BeerCardStyled = styled.article`
   justify-content: space-between;
   display: flex;
   margin: 25px;
-
-  background-color: var(--color-icon-cream);
   width: 330px;
   height: 534px;
   border-radius: var(--border-radius-standard);
 
   .beer-card {
+    &-odd {
+      background-color: var(--color-secondary-light-grey);
+    }
+    &-pair {
+      background-color: var(--color-icon-cream);
+    }
     &__main-content {
       display: flex;
       margin: 20px;
@@ -82,10 +86,14 @@ export const BeerCardStyled = styled.article`
       text-align: left;
       color: var(--color-icon-white);
       border: 0 none;
+      transition: 0.3s;
 
       &:hover {
         background-color: var(--color-primary-dark-grey);
-        transition: 0.7s;
+        transition: 0.3s;
+      }
+      &__button-icon {
+        background-color: var(--color-primary-dark-grey);
       }
     }
   }
