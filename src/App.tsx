@@ -1,14 +1,13 @@
-import useBeerApi from "./hooks/useBeerApi/useBeerApi";
-import { useEffect } from "react";
+import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./pages/HomePage/HomePage";
 
 const App = (): JSX.Element => {
-  const { getBeersFromApi } = useBeerApi();
-
-  useEffect(() => {
-    getBeersFromApi();
-  }, [getBeersFromApi]);
-
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <NavBar />
+      <HomePage />
+    </div>
+  );
 };
 
 export default App;
