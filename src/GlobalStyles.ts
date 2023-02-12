@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     --color-primary-ocher: rgba(239, 228, 200, 1);
     --color-primary-dark-grey: rgba(44, 35, 42, 1);
     --color-primary-white: rgba(255, 255, 255, 1);
+    --color-primary-white-alpha: rgba(255, 255, 255, 0.5);
     --color-secondary-light-grey: rgba(212, 211, 211, 1);
     --color-secondary-grey: rgba(84, 84, 84, 0.81);
     --color-secondary-light-ocher: rgba(205, 193, 162, 1);

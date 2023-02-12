@@ -1,16 +1,17 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import GlobalStyles from "./GlobalStyles";
 import BeersContextWrapper from "./store/contexts/beers/BeersContextWrapper";
 import UiContextWrapper from "./store/contexts/ui/UiContextWrapper";
+import HomePage from "./pages/HomePage/HomePage";
+import Layout from "./components/Layout/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [{ path: "/", element: "" }],
+    element: <Layout />,
+    children: [{ path: "/", element: <HomePage /> }],
   },
 ]);
 
