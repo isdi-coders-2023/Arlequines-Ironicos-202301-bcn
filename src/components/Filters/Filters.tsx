@@ -11,9 +11,15 @@ const Filters = () => {
 
   return (
     <FiltersStyled className="filters">
-      <Button filter={getClassicBeersFromApi} filterName={"Classics"} />
-      <Button filter={getStrongestBeersFromApi} filterName={"Strongest"} />
-      <Button filter={getMostBitterBeersFromApi} filterName={"Most Bitter"} />
+      <li>
+        <Button filter={getClassicBeersFromApi} filterName={"Classics"} />
+      </li>
+      <li>
+        <Button filter={getStrongestBeersFromApi} filterName={"Strongest"} />
+      </li>
+      <li>
+        <Button filter={getMostBitterBeersFromApi} filterName={"Most Bitter"} />
+      </li>
     </FiltersStyled>
   );
 };
