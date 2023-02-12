@@ -57,13 +57,13 @@ const useBeerApi = () => {
     try {
       uiDispatch(setIsLoadingActionCreator());
       const responseFromBeerApi = await fetch(
-        `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}&abv_gt=7`
+        `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}&abv_gt=8`
       );
 
-      const classicBeersInformation = convertKebabCaseToCamelCase(
+      const StrongestBeersInformation = convertKebabCaseToCamelCase(
         await responseFromBeerApi.json()
       ) as CamelCaseBeersStructure;
-      dispatch(loadBeersActionCreator(classicBeersInformation));
+      dispatch(loadBeersActionCreator(StrongestBeersInformation));
       uiDispatch(unsetIsLoadingActionCreator());
     } catch (error) {
       return (error as Error).message;
