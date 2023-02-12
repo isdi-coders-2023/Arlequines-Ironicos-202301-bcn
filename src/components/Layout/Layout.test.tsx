@@ -4,14 +4,14 @@ import Layout from "./Layout";
 
 describe("Given the Layout component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show text '' in the header", () => {
-      const expectedText = "home";
-
+    test("Then it should show the Header component and the Coder's Brew logo", () => {
       render(<Layout />, { wrapper: BrowserRouter });
 
-      const text = screen.getByText(expectedText);
+      const brandLogoText = screen.getByRole("img", {
+        name: "Coders' Brew logo",
+      });
 
-      expect(text).toBeInTheDocument();
+      expect(brandLogoText).toBeInTheDocument();
     });
   });
 });
