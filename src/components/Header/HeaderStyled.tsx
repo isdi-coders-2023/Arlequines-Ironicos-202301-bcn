@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderStyled = styled.header`
+const HeaderStyled = styled.div`
   background-color: var(--color-primary-white);
   display: flex;
   justify-content: center;
