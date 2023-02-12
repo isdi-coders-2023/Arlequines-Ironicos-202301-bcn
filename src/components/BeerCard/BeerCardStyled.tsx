@@ -5,8 +5,7 @@ export const BeerCardStyled = styled.article`
   justify-content: space-between;
   display: flex;
   margin: 25px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: var(--box-shadow-default);
 
   background-color: var(--color-icon-cream);
   width: 330px;
@@ -48,11 +47,13 @@ export const BeerCardStyled = styled.article`
       padding-top: 10px;
       overflow: hidden;
       text-overflow: ellipsis;
+      max-height: 230px;
     }
 
     &__tagLine {
       font-size: var(--font-size-tag-line);
       margin: 0px;
+      padding-top: 10px;
     }
 
     &__date {

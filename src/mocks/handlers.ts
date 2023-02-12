@@ -18,3 +18,12 @@ export const handlers = [
     }
   ),
 ];
+
+export const errorHandler = [
+  rest.get(
+    `${beerApiUrl}page=${currentPage}&per_page=${beersPerPage}`,
+    (req, res, ctx) => {
+      return res(ctx.status(404));
+    }
+  ),
+];
