@@ -12,7 +12,7 @@ import {
 import UiContext from "../../store/contexts/ui/UiContext";
 
 export const currentPage = 1;
-export const beersPerPage = 48;
+export const beersPerPage = 40;
 export const beerApiUrl = "https://api.punkapi.com/v2/beers?";
 
 const useBeerApi = () => {
