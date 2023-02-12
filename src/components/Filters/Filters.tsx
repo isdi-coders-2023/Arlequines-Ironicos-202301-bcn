@@ -1,16 +1,24 @@
+import useBeerApi from "../../hooks/useBeerApi/useBeerApi";
+import Button from "../Button/Button";
 import FiltersStyled from "./FiltersStyled";
 
 const Filters = () => {
+  const {
+    getStrongestBeersFromApi,
+    getClassicBeersFromApi,
+    getMostBitterBeersFromApi,
+  } = useBeerApi();
+
   return (
     <FiltersStyled className="filters">
       <li>
-        <button>Classics</button>
+        <Button filter={getClassicBeersFromApi} filterName={"Classics"} />
       </li>
       <li>
-        <button>Strongest</button>
+        <Button filter={getStrongestBeersFromApi} filterName={"Strongest"} />
       </li>
       <li>
-        <button>Most Bitter</button>
+        <Button filter={getMostBitterBeersFromApi} filterName={"Most Bitter"} />
       </li>
     </FiltersStyled>
   );
