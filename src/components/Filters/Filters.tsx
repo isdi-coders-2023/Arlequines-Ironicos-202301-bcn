@@ -3,9 +3,15 @@ import FiltersStyled from "./FiltersStyled";
 const Filters = () => {
   return (
     <FiltersStyled className="filters">
-      <button>Classics</button>
-      <button>Strongest</button>
-      <button>Most Bitter</button>
+      <li>
+        <button>Classics</button>
+      </li>
+      <li>
+        <button>Strongest</button>
+      </li>
+      <li>
+        <button>Most Bitter</button>
+      </li>
     </FiltersStyled>
   );
 };
