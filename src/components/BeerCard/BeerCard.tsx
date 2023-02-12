@@ -26,9 +26,7 @@ const BeerCard = ({
                 : imageUrl
             }`}
             alt={`${name} beer`}
-            width={`${
-              imageUrl === "https://images.punkapi.com/v2/24.png" ? 179 : 89
-            }`}
+            width={89}
             height={350}
           />
         </div>
