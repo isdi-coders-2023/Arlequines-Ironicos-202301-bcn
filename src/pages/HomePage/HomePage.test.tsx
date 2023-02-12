@@ -5,7 +5,8 @@ import HomePage from "./HomePage";
 
 describe("Given the HomePage Component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show a list of cards", () => {
+    test("Then it should show a list of beers", () => {
+      const expectedListName = "List of Beers";
       render(
         <BeersContextWrapper>
           <GlobalStyles />
@@ -13,9 +14,9 @@ describe("Given the HomePage Component", () => {
         </BeersContextWrapper>
       );
 
-      const list = screen.getByRole("list");
+      const listName = screen.getByRole("list", { name: expectedListName });
 
-      expect(list).toBeInTheDocument();
+      expect(listName).toBeInTheDocument();
     });
   });
 });
