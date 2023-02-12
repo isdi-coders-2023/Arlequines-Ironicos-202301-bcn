@@ -12,6 +12,7 @@ export const LoaderStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-primary-white);
 
   .newtons-cradle {
     --uib-size: 60px;
