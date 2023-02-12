@@ -8,7 +8,7 @@ interface BeerListProps {
 
 const BeerList = ({ beers }: BeerListProps): JSX.Element => {
   return (
-    <BeerListStyled>
+    <BeerListStyled aria-label="List of Beers">
       {beers.map((beer) => (
         <li key={beer.id}>
           <BeerCard beer={beer} />

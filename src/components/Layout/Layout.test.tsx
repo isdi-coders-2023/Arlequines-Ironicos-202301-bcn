@@ -4,7 +4,7 @@ import Layout from "./Layout";
 
 describe("Given the Layout component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show the Header component and the Coder's Brew logo", () => {
+    test("Then it should show the Header component with the Coder's Brew logo", () => {
       render(<Layout />, { wrapper: BrowserRouter });
 
       const brandLogoText = screen.getByRole("img", {

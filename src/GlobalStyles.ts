@@ -14,10 +14,8 @@ const GlobalStyles = createGlobalStyle`
     --font-size-card-title: 1.8rem;
     --font-size-tag-line: 1rem;
     --font-size-subtitle: 2.2rem;
-    --font-size-ingredints: 1.5rem;
+    --font-size-ingredients: 1.5rem;
     --font-size-button: 1.6rem;
-    --font-size-logo-sans-serif: 40px;
-    --font-size-logo-serif: 64px;
 
     --color-primary-ocher: rgba(239, 228, 200, 1);
     --color-primary-dark-grey: rgba(44, 35, 42, 1);
@@ -40,8 +38,8 @@ const GlobalStyles = createGlobalStyle`
 
     --border-radius-standard: 20px;
     --border-radius-minimum: 2px;
-    --box-shadow-default:  rgba(50, 50, 93, 0.2) 0px 20px 30px -6px,
-    rgba(0, 0, 0, 0.2) 0px 8px 18px -9px;
+    --box-shadow-default:  rgba(50, 50, 93, 0.15) 0px 10px 15px -6px,
+    rgba(0, 0, 0, 0.15) 0px 8px 18px -9px;
 
   }
 
@@ -76,6 +74,15 @@ const GlobalStyles = createGlobalStyle`
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  font-size: inherit ;
+  font-weight: inherit;
 }
 
 .beer-card {
