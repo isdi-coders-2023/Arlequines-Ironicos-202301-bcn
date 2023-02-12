@@ -8,7 +8,7 @@ const NavBar = (): JSX.Element => {
     <NavBarStyled className="navbar">
       <ul className="navbar__content">
         <li>
-          <a aria-label="to Home Page" className="navbar__home" href="home">
+          <a aria-label="to Home Page" className="navbar__home" href="/">
             <svg
               width="30"
               height="32"
@@ -27,7 +27,7 @@ const NavBar = (): JSX.Element => {
           <a
             aria-label="to Brew Beer Page"
             className="navbar__brew-beer"
-            href="to brew page"
+            href="/"
           >
             <svg
               width="35"
@@ -47,7 +47,7 @@ const NavBar = (): JSX.Element => {
           <a
             aria-label="to My Beers Page"
             className="navbar__my-beers"
-            href="my beers page"
+            href="/"
           >
             <svg
               width="34"
