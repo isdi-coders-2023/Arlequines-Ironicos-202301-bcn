@@ -15,6 +15,7 @@ const NavBarStyled = styled.nav`
   }
 
   @media only screen and (min-width: 768px) {
+    background-color: transparent;
     position: relative;
     width: 24.375rem;
   }

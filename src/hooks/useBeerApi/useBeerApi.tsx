@@ -6,7 +6,7 @@ import { loadBeersActionCreator } from "../../store/actions/beers/beersActionCre
 import convertKebabCaseToCamelCase from "../../utils/convertKebabCaseToCamelCase/convertKebabCaseToCamelCase";
 
 export const currentPage = 1;
-export const beersPerPage = 12;
+export const beersPerPage = 48;
 export const beerApiUrl = "https://api.punkapi.com/v2/beers?";
 
 const useBeerApi = () => {

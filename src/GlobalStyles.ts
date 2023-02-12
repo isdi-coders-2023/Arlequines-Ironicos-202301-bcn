@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/quicksand";
 import "@fontsource/rosarivo";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 
   :root {
 
@@ -39,6 +39,8 @@ const GlobalStyle = createGlobalStyle`
 
     --border-radius-standard: 20px;
     --border-radius-minimum: 2px;
+    --box-shadow-default:  rgba(50, 50, 93, 0.15) 0px 10px 15px -6px,
+    rgba(0, 0, 0, 0.15) 0px 8px 18px -9px;
 
   }
 
@@ -75,5 +77,14 @@ a:active {
   text-decoration: none;
 }
 
+.beer-card {
+  &-odd {
+    background-color: var(--color-secondary-light-grey);
+  }
+  &-pair {
+    background-color: var(--color-secondary-light-ocher);
+  }
+}
+
 `;
-export default GlobalStyle;
+export default GlobalStyles;
