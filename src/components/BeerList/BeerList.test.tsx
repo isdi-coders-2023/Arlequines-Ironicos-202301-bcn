@@ -58,12 +58,12 @@ describe("Given the BeerList component", () => {
           brewersTips: "",
         },
       ];
+      const expectedBeerName = "Storm";
 
       render(<BeerList beers={beersList}></BeerList>, {
         wrapper: BrowserRouter,
       });
-
-      const beerName = screen.getByRole("heading", { name: "Storm" });
+      const beerName = screen.getByRole("heading", { name: expectedBeerName });
 
       expect(beerName).toBeInTheDocument();
     });
