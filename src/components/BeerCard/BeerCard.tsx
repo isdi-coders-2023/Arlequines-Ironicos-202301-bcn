@@ -26,7 +26,7 @@ const BeerCard = ({
                 : imageUrl
             }`}
             alt={`${name} beer`}
-            width={92}
+            width={89}
             height={350}
           />
         </div>
