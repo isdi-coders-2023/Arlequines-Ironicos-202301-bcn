@@ -7,7 +7,7 @@ const Layout = (): JSX.Element => {
   return (
     <>
       <GlobalStyles />
-      <header>
+      <header role="heading" aria-level={2}>
         <Header />
         <NavBar />
       </header>
