@@ -1,28 +1,70 @@
 import { act, renderHook } from "@testing-library/react";
 import { errorHandler } from "../../mocks/handlers";
-import { Wrapper } from "../../mocks/mockContextProvider";
-import { mockDispatch, mockLoadBeersAction } from "../../mocks/mockStore";
+import { Wrapper } from "../../mocks/Wrapper";
+import {
+  mockDispatch,
+  mockLoadBeersAction,
+  mockSetIsLoading,
+  mockStore,
+  mockUiDispatch,
+  mockUiStore,
+} from "../../mocks/store";
 import { server } from "../../mocks/server";
 import useBeerApi from "./useBeerApi";
 
 beforeAll(() => jest.clearAllMocks());
 
-describe("Given a useBeerApi custom hook", () => {
+const dispatcher = mockDispatch;
+const store = mockStore;
+
+const uiStore = mockUiStore;
+const uiDispatch = mockUiDispatch;
+const setIsLoadingAction = mockSetIsLoading;
+const times = 2;
+
+describe("Given the useBeerApi custom hook", () => {
   const dispatch = mockDispatch;
-  describe("When called inside a component", () => {
+  describe("When the getBeersFromApi function is called", () => {
     test("Then it should call the dispatcher", async () => {
       const {
         result: {
           current: { getBeersFromApi },
         },
       } = renderHook(() => useBeerApi(), {
-        wrapper: Wrapper,
+        wrapper({ children }) {
+          return (
+            <Wrapper uiStore={uiStore} beersStore={store}>
+              {children}
+            </Wrapper>
+          );
+        },
       });
 
       await act(async () => getBeersFromApi());
 
-      expect(dispatch).toHaveBeenCalledWith(mockLoadBeersAction);
+      expect(dispatcher).toHaveBeenCalledWith(mockLoadBeersAction);
     });
+  });
+
+  test("Then it should call the uiDispatch twice", async () => {
+    const {
+      result: {
+        current: { getBeersFromApi },
+      },
+    } = renderHook(() => useBeerApi(), {
+      wrapper({ children }) {
+        return (
+          <Wrapper uiStore={uiStore} beersStore={store}>
+            {children}
+          </Wrapper>
+        );
+      },
+    });
+
+    await act(async () => getBeersFromApi());
+
+    expect(uiDispatch).toHaveBeenCalledTimes(times);
+    expect(uiDispatch).toHaveBeenCalledWith(setIsLoadingAction);
   });
   describe("When the getBeersFromApi function is called and the response of the fetch fails", () => {
     beforeEach(() => {
@@ -34,7 +76,13 @@ describe("Given a useBeerApi custom hook", () => {
           current: { getBeersFromApi },
         },
       } = renderHook(() => useBeerApi(), {
-        wrapper: Wrapper,
+        wrapper({ children }) {
+          return (
+            <Wrapper uiStore={uiStore} beersStore={store}>
+              {children}
+            </Wrapper>
+          );
+        },
       });
 
       await act(async () => getBeersFromApi());
