@@ -2,7 +2,7 @@ import HeaderStyled from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
   return (
-    <HeaderStyled className="header">
+    <HeaderStyled className="header" role="heading" aria-level={2}>
       <div className="brand-logo">
         <a href="/">
           <svg
