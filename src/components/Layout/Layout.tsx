@@ -11,10 +11,8 @@ const Layout = (): JSX.Element => {
   return (
     <>
       <GlobalStyles />
-      <header role="heading" aria-level={2}>
-        <Header />
-        <NavBar />
-      </header>
+      <Header />
+      <NavBar />
       <main>
         {isLoading && <Loader />}
         <Outlet />
