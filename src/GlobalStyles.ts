@@ -74,6 +74,7 @@ const GlobalStyles = createGlobalStyle`
 a:visited,
 a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 button {

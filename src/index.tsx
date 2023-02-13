@@ -6,12 +6,19 @@ import BeersContextWrapper from "./store/contexts/beers/BeersContextWrapper";
 import UiContextWrapper from "./store/contexts/ui/UiContextWrapper";
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./components/Layout/Layout";
+import DetailPage from "./pages/DetailPage/DetailPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [{ path: "/", element: <HomePage /> }],
+    children: [
+      { path: "/", element: <HomePage /> },
+      {
+        path: "detail/:id",
+        element: <DetailPage />,
+      },
+    ],
   },
 ]);
 
