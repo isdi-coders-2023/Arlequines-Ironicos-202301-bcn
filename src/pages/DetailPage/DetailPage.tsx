@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 const DetailPage = (): JSX.Element => {
   const { id } = useParams();
 
-  return <div>DetailPage : {id}</div>;
+  return <h1>DetailPage </h1>;
 };
 
 export default DetailPage;
